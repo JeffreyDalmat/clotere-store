@@ -1,49 +1,21 @@
 {
   "sections": {
+    "0d3330d6-8e40-443a-999d-7a2f1919b154": {
+      "type": "liquid-ref",
+      "settings": {
+        "liquid-ref": "Custom Headind added from shopify backend"
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
         "padding_top": 36,
         "padding_bottom": 76
       }
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "blocks": {
-        "paragraph": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>EMAIL SIGNUP<\/p>"
-          }
-        },
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Sign up for our email list",
-            "heading_size": "h0"
-          }
-        },
-        "email_form": {
-          "type": "email_form",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "paragraph",
-        "heading",
-        "email_form"
-      ],
-      "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 40
-      }
     }
   },
   "order": [
-    "main",
-    "newsletter"
+    "0d3330d6-8e40-443a-999d-7a2f1919b154",
+    "main"
   ]
 }
