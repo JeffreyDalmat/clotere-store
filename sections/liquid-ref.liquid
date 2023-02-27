@@ -1,20 +1,118 @@
-<h1>This works in both directions now</h1>
+<h1>Text</h1>
+<h2>{{ section.settings['liquid-ref'] }}</h2>
+
+<br>
+
+<h1>Checkbox</h1>
+{% if section.settings['liquid-checkbox'] %}
+  <h2>Checkbox is checked</h2>
+{% else %}
+  <h2>Checkbox is not checked</h2>
+{% endif %}
+
+<br>
+
+<h1>Number</h1>
+{% if section.settings['liquid-number'] > 0 %}
+  <h3>{{ section.settings['liquid-number'] }}</h3>
+{% endif %}
+
+<br>
+
+<h1>Radio</h1>
+{% if section.settings['liquid-radio'] == 'option-1' %}
+  Option 1 selected
+{% else %}
+  Option 2 selected
+{% endif %}
+
+<br>
+
+<h1>Range</h1>
+{{ section.settings['liquid-range'] }}
+<br>
+
+<h1>Select</h1>
+{{ section.settings['liquid-select'] }}
+
+<h1>Text area</h1>
+{{ section.settings['liquid-textarea'] }}
 
 {% schema %}
 {
-    "name": "Liquid Reference",
-    "settings": [
+  "name": "Liquid Reference",
+  "settings": [
+    {
+      "id": "liquid-ref",
+      "type": "text",
+      "label": "Text"
+    },
+    {
+      "id": "liquid-checkbox",
+      "type": "checkbox",
+      "label": "Checkbox"
+    },
+    {
+      "id": "liquid-number",
+      "type": "number",
+      "label": "Number"
+    },
+    {
+      "id": "liquid-radio",
+      "type": "radio",
+      "label": "Radio",
+      "options": [
         {
-            "id": "liquid-ref",
-            "type": "text",
-            "label": "A reference for Shopify Liquid"
-        }
-    ],
-    "presets": [
+          "value": "option-1",
+          "label": "Option 1"
+        },
         {
-            "name": "Liquid Reference",
-            "category": "Reference"
+          "value": "option-2",
+          "label": "Option 2"
         }
-    ]
+      ],
+      "default": "option-1"
+    },
+    {
+      "id": "liquid-range",
+      "type": "range",
+      "label": "Range",
+      "min": 3,
+      "max": 12,
+      "step": 3,
+      "default": 3
+    },
+    {
+      "id": "liquid-select",
+      "type": "select",
+      "label": "Select",
+      "options": [
+        {
+          "value": "option-1",
+          "label": "Option 1"
+        },
+        {
+          "value": "option-2",
+          "label": "Option 2"
+        },
+        {
+          "value": "option-3",
+          "label": "Option 3"
+        }
+      ],
+      "default": "option-1"
+    },
+    {
+      "id": "liquid-textarea",
+      "type": "textarea",
+      "label": "Text Area"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Liquid Reference",
+      "category": "Reference"
+    }
+  ]
 }
 {% endschema %}
