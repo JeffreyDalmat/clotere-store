@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "0d3330d6-8e40-443a-999d-7a2f1919b154": {
+      "type": "liquid-ref",
+      "settings": {
+        "liquid-ref": "Custom Headind added from shopify backend"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 76
+      }
+    }
+  },
+  "order": [
+    "0d3330d6-8e40-443a-999d-7a2f1919b154",
+    "main"
+  ]
+}
